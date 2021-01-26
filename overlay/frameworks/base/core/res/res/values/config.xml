@@ -1100,6 +1100,10 @@
         <item>800</item>
     </array>
 
+    <!-- The type of the light sensor to be used by the display framework for things like
+         auto-brightness. If unset, then it just gets the default sensor of type TYPE_LIGHT. -->
+    <string name="config_displayLightSensorType">com.samsung.sensor.physical_light</string>
+
     <!-- Screen brightness used to dim the screen when the user activity
          timeout expires.  May be less than the minimum allowed brightness setting
          that can be set by the user. -->
