@@ -14,3 +14,6 @@ include vendor/samsung/r9s/BoardConfigVendor.mk
 
 # Properties
 TARGET_VENDOR_PROP += $(DEVICE_PATH)/vendor.prop
+
+## Screen density
+TARGET_SCREEN_DENSITY := 480
