@@ -19,6 +19,16 @@ namespace_imports = [
 ]
 
 blob_fixups: blob_fixups_user_type = {
+    'vendor/lib64/libexynoscamera3.so': blob_fixup()
+        # NOP SecCameraIPCtoRIL::enable m_sendRequest()
+        .sig_replace('14 00 00 94 0A 00 00 14', '1F 20 03 D5 0A 00 00 14')
+        # NOP SecCameraIPCtoRIL::disable m_sendRequest()
+        .sig_replace('A8 FF FF 97 0A 00 00 14', '1F 20 03 D5 0A 00 00 14')
+        # Force RAW available on all cameras
+        .sig_replace(
+            '28 45 97 52 00 68 68 38 C0 03 5F D6',
+            '20 00 80 52 1F 20 03 D5 C0 03 5F D6'
+        ),
     (
         'vendor/lib/sensors.sensorhub.so',
         'vendor/lib64/sensors.sensorhub.so',
