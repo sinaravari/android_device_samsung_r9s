@@ -20,6 +20,10 @@ PRODUCT_COPY_FILES += \
     vendor/samsung/r9s/proprietary/vendor/firmware/s3908_r9.bin:$(TARGET_COPY_OUT_VENDOR_RAMDISK)/vendor/firmware/s3908_r9.bin \
     vendor/samsung/r9s/proprietary/vendor/firmware/s3908_r9_slsi.bin:$(TARGET_COPY_OUT_VENDOR_RAMDISK)/vendor/firmware/s3908_r9_slsi.bin
 
+# Sensors
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/sensors/hals.conf:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/hals.conf
+
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH)

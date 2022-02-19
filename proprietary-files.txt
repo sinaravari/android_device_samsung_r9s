@@ -155,7 +155,6 @@ vendor/tee/driver/00000000-0000-0000-0000-564c544b4456
 vendor/tee/ffffffff-0000-0000-0000-000000000030
 
 # Sensors
-vendor/etc/sensors/hals.conf
 vendor/lib64/sensors.grip.so
 vendor/lib64/sensors.sensorhub.so
 
