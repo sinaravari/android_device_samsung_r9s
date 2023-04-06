@@ -23,7 +23,8 @@ blob_fixups: blob_fixups_user_type = {
         'vendor/lib/sensors.sensorhub.so',
         'vendor/lib64/sensors.sensorhub.so',
     ): blob_fixup()
-        .add_needed('libutils-v32.so'),
+        .add_needed('libutils-v32.so')
+        .binary_regex_replace(b'_ZN7android6Thread3runEPKcim', b'_ZN7utils326Thread3runEPKcim'),
 } # fmt: skip
 
 module = ExtractUtilsModule(
