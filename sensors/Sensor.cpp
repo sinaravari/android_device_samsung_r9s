@@ -20,7 +20,24 @@
 #include <log/log.h>
 #include <utils/SystemClock.h>
 
+#include <fstream>
 #include <cmath>
+
+#define TSP_ENABLED_PATH "/sys/class/sec/tsp/input/enabled"
+
+template <typename T>
+static void set(const std::string& path, const T& value) {
+    std::ofstream file(path);
+    file << value;
+}
+
+template <typename T>
+static T get(const std::string& path, const T& def) {
+    std::ifstream file(path);
+    T result;
+    file >> result;
+    return file.fail() ? def : result;
+}
 
 static bool readBool(int fd, bool seek) {
     char c;
@@ -271,6 +288,10 @@ void SysfsPollingOneShotSensor::writeEnable(bool enable) {
 void SysfsPollingOneShotSensor::activate(bool enable, bool notify, bool lock) {
     std::unique_lock<std::mutex> runLock(mRunMutex, std::defer_lock);
 
+    if (!enable && strcmp(get<std::string>(TSP_ENABLED_PATH, "0").c_str(), "0") == 0) {
+        set(TSP_ENABLED_PATH, "1");
+    }
+
     if (lock) {
         runLock.lock();
     }
@@ -288,6 +309,10 @@ void SysfsPollingOneShotSensor::activate(bool enable, bool notify, bool lock) {
 
     if (lock) {
         runLock.unlock();
+    }
+
+    if (enable && strcmp(get<std::string>(TSP_ENABLED_PATH, "0").c_str(), "1") == 0) {
+        set(TSP_ENABLED_PATH, "0");
     }
 }
 
@@ -321,6 +346,9 @@ void SysfsPollingOneShotSensor::run() {
             }
 
             if (mPolls[1].revents == mPolls[1].events && readFd(mPollFd)) {
+                if (strcmp(get<std::string>(TSP_ENABLED_PATH, "0").c_str(), "0") == 0) {
+                    set(TSP_ENABLED_PATH, "1");
+                }
                 activate(false, false, false);
                 mCallback->postEvents(readEvents(), isWakeUpSensor());
             } else if (mPolls[0].revents == mPolls[0].events) {
