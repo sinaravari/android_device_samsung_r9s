@@ -1,1 +1,6 @@
 ## vendor prop for r9s
+
+## WiFi
+ro.vendor.wifi.sap.interface=wlan1
+vendor.wifi.dualconcurrent.interface=wlan0
+wifi.concurrent.interface=wlan0
