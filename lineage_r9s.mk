@@ -13,9 +13,6 @@ $(call inherit-product, device/samsung/r9s/device.mk)
 # Inherit from common lineage configuration
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
-# Enable updating of APEXes
-$(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
-
 PRODUCT_NAME := lineage_r9s
 PRODUCT_DEVICE := r9s
 PRODUCT_BRAND := samsung
