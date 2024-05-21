@@ -357,6 +357,41 @@ bool SysfsPollingOneShotSensor::readFd(const int fd) {
     return readBool(fd, true /* seek */);
 }
 
+void UdfpsSensor::fillEventData(Event& event) {
+    event.u.data[0] = mScreenX;
+    event.u.data[1] = mScreenY;
+}
+
+bool UdfpsSensor::readFd(const int fd) {
+    char buffer[512];
+    int state = 0;
+    int rc;
+
+    rc = lseek(fd, 0, SEEK_SET);
+    if (rc < 0) {
+        ALOGE("failed to seek: %d", rc);
+        return false;
+    }
+    rc = read(fd, &buffer, sizeof(buffer));
+    if (rc < 0) {
+        ALOGE("failed to read state: %d", rc);
+        return false;
+    }
+    rc = sscanf(buffer, "%d %d %d", &state, &mScreenX, &mScreenY);
+    if (rc == 1) {
+        // If scrub_pos contains only one value,
+        // assume that just reports the state
+        state = mScreenX;
+        mScreenX = 0;
+        mScreenY = 0;
+    } else if (rc < 3) {
+        ALOGE("failed to parse fp state: %d", rc);
+        return false;
+    }
+    // scrub_pos returns 15 for FOD gesture
+    return (state == 15) ? 1 : 0;
+}
+
 }  // namespace implementation
 }  // namespace subhal
 }  // namespace V2_1
