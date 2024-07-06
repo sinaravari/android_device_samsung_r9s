@@ -19,6 +19,8 @@ namespace_imports = [
 ]
 
 blob_fixups: blob_fixups_user_type = {
+    'vendor/lib/libexynoscamera3.so': blob_fixup()
+        .add_needed('libshim_camera.so'),
     'vendor/lib64/libexynoscamera3.so': blob_fixup()
         # NOP SecCameraIPCtoRIL::enable m_sendRequest()
         .sig_replace('14 00 00 94 0A 00 00 14', '1F 20 03 D5 0A 00 00 14')
@@ -28,7 +30,8 @@ blob_fixups: blob_fixups_user_type = {
         .sig_replace(
             '28 45 97 52 00 68 68 38 C0 03 5F D6',
             '20 00 80 52 1F 20 03 D5 C0 03 5F D6'
-        ),
+        )
+        .add_needed('libshim_camera.so'),
     (
         'vendor/lib/sensors.sensorhub.so',
         'vendor/lib64/sensors.sensorhub.so',
