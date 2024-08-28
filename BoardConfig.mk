@@ -11,12 +11,6 @@ include device/samsung/exynos2100/BoardConfigCommon.mk
 # Inherit from the proprietary version
 include vendor/samsung/r9s/BoardConfigVendor.mk
 
-## Camera
-SOONG_CONFIG_NAMESPACES += samsungCameraVars
-SOONG_CONFIG_samsungCameraVars += extra_ids
-# ID=52 is telephoto
-SOONG_CONFIG_samsungCameraVars_extra_ids := 52
-
 # Kernel
 KERNEL_SRC_PATH := kernel/samsung/r9s
 
