@@ -60,21 +60,12 @@ vendor/firmware/bcm4375B1_murata.hcd
 vendor/firmware/bcm4375B1_semco_sem.hcd
 
 # Camera
-vendor/lib/hw/camera.exynos2100.so
-vendor/lib/libexynoscamera3.so
-vendor/lib/libexynoscamera_vpl_plugin.so
 vendor/lib64/hw/camera.exynos2100.so
 vendor/lib64/libexynoscamera3.so
 vendor/lib64/libexynoscamera_vpl_plugin.so
 vendor/lib64/libsec2lsi_conversion.so
 
 # Camera dependencies
-vendor/lib/libvdis_core.so
-vendor/lib/libvdis_interface.so
-vendor/lib/libtriplecam_image_optical_zoom.so
-vendor/lib/libtriplecam_video_optical_zoom.so
-vendor/lib/libtriplecapture_interface.so
-vendor/lib/libtriplepreview_interface.so
 vendor/lib64/libvdis_core.so
 vendor/lib64/libvdis_interface.so
 vendor/lib64/libtriplecam_image_optical_zoom.so
@@ -96,7 +87,6 @@ vendor/firmware/setfile_imx616.bin
 
 # GNSS
 vendor/bin/hw/gpsd
-vendor/lib/libwrappergps.so
 vendor/lib64/libwrappergps.so
 
 # NFC
@@ -166,18 +156,10 @@ vendor/tee/ffffffff-0000-0000-0000-000000000030
 
 # Sensors
 vendor/etc/sensors/hals.conf
-vendor/lib/sensors.grip.so
-vendor/lib/sensors.sensorhub.so
 vendor/lib64/sensors.grip.so
 vendor/lib64/sensors.sensorhub.so
 
 # Fingerprint
-vendor/lib/libbauthserver.so
-vendor/lib/libbauthtzcommon.so
-vendor/lib/libegis_fp_normal_sensor_test.so
-vendor/lib/libgf_in_system_lib.so
-vendor/lib/libqfp_sensortest.so
-vendor/lib/libsynaFpSensorTestNwd.so;DISABLE_DEPS
 vendor/lib64/libbauthserver.so
 vendor/lib64/libbauthtzcommon.so
 vendor/lib64/libegis_fp_normal_sensor_test.so
