@@ -15,6 +15,8 @@ from extract_utils.main import (
 
 namespace_imports = [
     'device/samsung/exynos2100',
+    'hardware/samsung_slsi-linaro/exynos',
+    'hardware/samsung_slsi-linaro/graphics',
     'vendor/samsung/exynos2100',
 ]
 
