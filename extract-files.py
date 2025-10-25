@@ -35,12 +35,27 @@ blob_fixups: blob_fixups_user_type = {
         )
         .add_needed('libshim_camera.so'),
     (
+        'vendor/lib/libvdis_core.so',
+        'vendor/lib64/libvdis_core.so',
+    ): blob_fixup()
+        .add_needed('libsensorndkbridge_shim.so')
+        .add_needed('libutils-v32.so'),
+    (
         'vendor/lib/sensors.sensorhub.so',
         'vendor/lib64/sensors.sensorhub.so',
     ): blob_fixup()
         .add_needed('libutils-v32.so')
         .remove_needed('libhidltransport.so')
         .binary_regex_replace(b'_ZN7android6Thread3runEPKcim', b'_ZN7utils326Thread3runEPKcim'),
+   (
+       'vendor/lib/libaudioproxy2.so',
+       'vendor/lib64/libaudioproxy2.so',
+   ): blob_fixup()
+        .remove_needed('libhwbinder.so')
+        .replace_needed('libaudioroute.so', 'libaudioroute_exynos2100.so')
+        .replace_needed('libtinyalsa.so', 'libtinyalsa_exynos2100.so'),
+    'vendor/lib/hw/audio.primary.exynos2100.so': blob_fixup()
+        .replace_needed('libaudioroute.so', 'libaudioroute_exynos2100.so'),
 } # fmt: skip
 
 module = ExtractUtilsModule(

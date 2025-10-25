@@ -9,6 +9,9 @@ vendor/etc/mixer_usb_white.xml
 vendor/etc/floating_feature.xml
 vendor/etc/SoundBoosterParam.txt
 vendor/etc/dolby/dax-default.xml
+vendor/lib/hw/audio.primary.exynos2100.so
+vendor/lib/hw/vendor.samsung_slsi.hardware.ExynosA2DPOffload@3.0-impl.so
+vendor/lib/libaudioproxy2.so
 vendor/lib/librecordalive.so
 vendor/lib/lib_SoundBooster_ver1070.so
 vendor/lib/soundfx/libaudiosaplus_sec.so
@@ -17,6 +20,8 @@ vendor/lib/soundfx/libswdap.so
 vendor/lib/soundfx/libswspatializer.so
 vendor/lib/spatializer-aidl-V1-cpp.so
 vendor/lib/lib_SamsungRec_07020.so
+vendor/lib64/hw/vendor.samsung_slsi.hardware.ExynosA2DPOffload@3.0-impl.so
+vendor/lib64/libaudioproxy2.so
 vendor/lib64/lib_SoundBooster_ver1070.so
 vendor/lib64/soundfx/libaudiosaplus_sec.so
 vendor/lib64/soundfx/libsamsungSoundbooster_plus.so
@@ -64,10 +69,14 @@ vendor/lib64/libexynoscamera_vpl_plugin.so
 vendor/lib64/libsec2lsi_conversion.so
 
 # Camera dependencies
+vendor/lib/libvdis_core.so
+vendor/lib/libvdis_interface.so
 vendor/lib/libtriplecam_image_optical_zoom.so
 vendor/lib/libtriplecam_video_optical_zoom.so
 vendor/lib/libtriplecapture_interface.so
 vendor/lib/libtriplepreview_interface.so
+vendor/lib64/libvdis_core.so
+vendor/lib64/libvdis_interface.so
 vendor/lib64/libtriplecam_image_optical_zoom.so
 vendor/lib64/libtriplecam_video_optical_zoom.so
 vendor/lib64/libtriplecapture_interface.so
@@ -84,6 +93,14 @@ vendor/firmware/setfile_hi1336.bin
 vendor/firmware/setfile_hi847.bin
 vendor/firmware/setfile_imx258.bin
 vendor/firmware/setfile_imx616.bin
+
+# GNSS
+vendor/bin/hw/gpsd
+vendor/lib/libwrappergps.so
+vendor/lib64/libwrappergps.so
+
+# NFC
+vendor/etc/nfc/libnfc-nxp_RF.conf;SYMLINK=vendor/libnfc-nxp_RF.conf
 
 # MFC Firmware
 vendor/firmware/mfc_fw.bin
@@ -148,10 +165,25 @@ vendor/tee/driver/00000000-0000-0000-0000-564c544b4456
 vendor/tee/ffffffff-0000-0000-0000-000000000030
 
 # Sensors
+vendor/etc/sensors/hals.conf
 vendor/lib/sensors.grip.so
 vendor/lib/sensors.sensorhub.so
 vendor/lib64/sensors.grip.so
 vendor/lib64/sensors.sensorhub.so
+
+# Fingerprint
+vendor/lib/libbauthserver.so
+vendor/lib/libbauthtzcommon.so
+vendor/lib/libegis_fp_normal_sensor_test.so
+vendor/lib/libgf_in_system_lib.so
+vendor/lib/libqfp_sensortest.so
+vendor/lib/libsynaFpSensorTestNwd.so;DISABLE_DEPS
+vendor/lib64/libbauthserver.so
+vendor/lib64/libbauthtzcommon.so
+vendor/lib64/libegis_fp_normal_sensor_test.so
+vendor/lib64/libgf_in_system_lib.so
+vendor/lib64/libqfp_sensortest.so
+vendor/lib64/libsynaFpSensorTestNwd.so
 
 # touchscreen firmware
 vendor/firmware/s3908_r9.bin
