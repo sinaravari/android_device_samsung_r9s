@@ -72,5 +72,5 @@
     <integer name="config_udfpsDimmingDisableDelay">35</integer>
 
     <!-- Color of the UDFPS pressed view -->
-    <color name="config_udfpsColor">#ffffffff</color>
+    <color name="config_udfpsColor">#ff00ff00</color>
 </resources>
