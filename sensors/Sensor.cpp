@@ -364,6 +364,7 @@ void UdfpsSensor::fillEventData(Event& event) {
 
 bool UdfpsSensor::readFd(const int fd) {
     char buffer[512];
+    memset(buffer, 0, sizeof(buffer));
     int state = 0;
     int rc;
 
@@ -372,24 +373,27 @@ bool UdfpsSensor::readFd(const int fd) {
         ALOGE("failed to seek: %d", rc);
         return false;
     }
-    rc = read(fd, &buffer, sizeof(buffer));
-    if (rc < 0) {
+
+    rc = read(fd, buffer, sizeof(buffer));
+    if (rc <= 0) {
         ALOGE("failed to read state: %d", rc);
         return false;
     }
-    rc = sscanf(buffer, "%d %d %d", &state, &mScreenX, &mScreenY);
-    if (rc == 1) {
-        // If scrub_pos contains only one value,
-        // assume that just reports the state
-        state = mScreenX;
-        mScreenX = 0;
-        mScreenY = 0;
-    } else if (rc < 3) {
-        ALOGE("failed to parse fp state: %d", rc);
-        return false;
+
+    int x = 0, y = 0;
+    rc = sscanf(buffer, "%d %d %d", &state, &x, &y);
+
+    ALOGD("UDFPS: parsed %d fields - state=%d, x=%d, y=%d", rc, state, x, y);
+    if (rc >= 1) {
+        mScreenX = x;
+        mScreenY = y;
+
+        // scrub_pos returns 15 for FOD gesture
+        return (state == 15);
     }
-    // scrub_pos returns 15 for FOD gesture
-    return (state == 15) ? 1 : 0;
+
+    ALOGE("failed to parse fp state: got %d fields", rc);
+    return false;
 }
 
 }  // namespace implementation
