@@ -27,12 +27,15 @@ PRODUCT_PACKAGES += \
     sensors.samsung
 
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/hals.conf:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/hals.conf
+    $(LOCAL_PATH)/configs/sensors/hals.conf:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/hals.conf
 
 # UDFPS
 $(call soong_config_set,samsungUdfpsVars,dim_layer_zorder,0xff)
 $(call soong_config_set,samsungUdfpsVars,udfps_zorder,0x100)
 $(call soong_config_set,surfaceflinger,udfps_lib,//hardware/samsung/fingerprint:libudfps_extension.samsung)
+
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/init/init.udfps.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.udfps.rc
 
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
