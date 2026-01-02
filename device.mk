@@ -24,11 +24,11 @@ PRODUCT_COPY_FILES += \
 
 # Sensors
 PRODUCT_PACKAGES += \
-    sensors.r9s \
+    sensors.samsung \
     sensors.sensorhub_wait_for_mcu
 
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/sensors/hals.conf:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/hals.conf
+    $(LOCAL_PATH)/hals.conf:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/hals.conf
 
 # UDFPS
 $(call soong_config_set,samsungUdfpsVars,dim_layer_zorder,0xff)
