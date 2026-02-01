@@ -5,12 +5,6 @@
 
 DEVICE_PATH := device/samsung/r9s
 
-# Inherit from samsung exynos2100
-include device/samsung/exynos2100/BoardConfigCommon.mk
-
-# Inherit from the proprietary version
-include vendor/samsung/r9s/BoardConfigVendor.mk
-
 # Kernel
 KERNEL_SRC_PATH := kernel/samsung/r9s
 
@@ -54,3 +48,9 @@ TARGET_SCREEN_DENSITY := 480
 
 # Properties
 TARGET_VENDOR_PROP += $(DEVICE_PATH)/vendor.prop
+
+# Inherit from exynos2100
+include device/samsung/exynos2100/BoardConfigCommon.mk
+
+# Inherit from the proprietary version
+include vendor/samsung/r9s/BoardConfigVendor.mk
