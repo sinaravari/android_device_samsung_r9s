@@ -100,7 +100,6 @@ mcd-panel.ko
 dpu.ko
 dp_ext_func.ko
 mali_kbase.ko
-hdm.ko
 flicker_test.ko
 stk.ko
 broadcom-sensorhub.ko
@@ -166,7 +165,6 @@ sec_tsp_dumpkey.ko
 sec_input_notifier.ko
 sec_common_fn.ko
 sec_cmd.ko
-input_booster_lkm.ko
 sec_vibrator.ko
 hall_ic.ko
 hall_ic_notifier.ko
