@@ -115,7 +115,6 @@ vendor/firmware/dsp_ivp_pm_do.bin
 # DRM Firmware
 vendor/firmware/OD_V2.1.6_01_26_QVGA.nnc
 vendor/firmware/OD_V2.3.7_02_05_VGA.nnc
-vendor/firmware/secure_configuration.flm.cfg.bin
 
 # Teegris Firmware
 vendor/tee/00000000-0000-0000-0000-000000010081
