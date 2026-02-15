@@ -27,6 +27,7 @@ pmic_class.ko
 s2mps23-regulator.ko
 s2mps24-regulator.ko
 phy-exynos-usbdrd-super.ko
+sec_debug_mode.ko
 fingerprint.ko
 ssg-iosched.ko
 blk-sec-stats.ko
@@ -159,6 +160,7 @@ usb_notify_layer.ko
 usb_notifier.ko
 s2mps23-key.ko
 synaptics_ts.ko
+sec_tsp_log.ko
 sec_tclm_v2.ko
 sec_secure_touch.ko
 sec_tsp_dumpkey.ko
@@ -214,6 +216,21 @@ dw_mmc-pltfm.ko
 dw_mmc-exynos.ko
 leds-ktd2692.ko
 fmp-core.ko
+sec_debug.ko
+sec_debug_test.ko
+sec_debug_dprm.ko
+sec_debug_extra_info.ko
+sec_debug_hw_param.ko
+sec_debug_reset_reason.ko
+sec_debug_wdd_info.ko
+sec_debug_hist.ko
+sec_debug_summary.ko
+sec_debug_softdog.ko
+sec_debug_logbuf_interface.ko
+sec_debug_sched_info.ko
+sec_debug_stacktrace.ko
+sec_debug_hardlockup_info.ko
+sec_debug_sched_report.ko
 vbus_notifier.ko
 sec_pm_debug.ko
 sec_pm_log.ko
