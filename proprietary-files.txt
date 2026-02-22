@@ -9,17 +9,6 @@ vendor/etc/mixer_paths.xml
 vendor/etc/mixer_usb_default.xml
 vendor/etc/mixer_usb_gray.xml
 vendor/etc/mixer_usb_white.xml
-vendor/lib/hw/audio.primary.exynos2100.so
-vendor/lib/hw/vendor.samsung_slsi.hardware.ExynosA2DPOffload@3.0-impl.so
-vendor/lib/soundfx/libaudiosaplus_sec.so
-vendor/lib/soundfx/libsamsungSoundbooster_plus.so
-vendor/lib/soundfx/libswdap.so
-vendor/lib/soundfx/libswspatializer.so
-vendor/lib/lib_SamsungRec_07020.so
-vendor/lib/lib_SoundBooster_ver1070.so
-vendor/lib/libaudioproxy2.so
-vendor/lib/librecordalive.so
-vendor/lib/spatializer-aidl-V1-cpp.so
 vendor/lib64/hw/vendor.samsung_slsi.hardware.ExynosA2DPOffload@3.0-impl.so
 vendor/lib64/soundfx/libaudiosaplus_sec.so
 vendor/lib64/soundfx/libsamsungSoundbooster_plus.so
