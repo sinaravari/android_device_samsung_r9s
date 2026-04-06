@@ -1,59 +1,59 @@
 # Proprietary files - from Samsung package version G990EXXSIGYI3, unless pinned
 
 # Audio
+vendor/etc/dolby/dax-default.xml
+vendor/etc/SoundBoosterParam.txt
+vendor/etc/floating_feature.xml
 vendor/etc/mixer_gains.xml
 vendor/etc/mixer_paths.xml
 vendor/etc/mixer_usb_default.xml
 vendor/etc/mixer_usb_gray.xml
 vendor/etc/mixer_usb_white.xml
-vendor/etc/floating_feature.xml
-vendor/etc/SoundBoosterParam.txt
-vendor/etc/dolby/dax-default.xml
 vendor/lib/hw/audio.primary.exynos2100.so
 vendor/lib/hw/vendor.samsung_slsi.hardware.ExynosA2DPOffload@3.0-impl.so
-vendor/lib/libaudioproxy2.so
-vendor/lib/librecordalive.so
-vendor/lib/lib_SoundBooster_ver1070.so
 vendor/lib/soundfx/libaudiosaplus_sec.so
 vendor/lib/soundfx/libsamsungSoundbooster_plus.so
 vendor/lib/soundfx/libswdap.so
 vendor/lib/soundfx/libswspatializer.so
-vendor/lib/spatializer-aidl-V1-cpp.so
 vendor/lib/lib_SamsungRec_07020.so
+vendor/lib/lib_SoundBooster_ver1070.so
+vendor/lib/libaudioproxy2.so
+vendor/lib/librecordalive.so
+vendor/lib/spatializer-aidl-V1-cpp.so
 vendor/lib64/hw/vendor.samsung_slsi.hardware.ExynosA2DPOffload@3.0-impl.so
-vendor/lib64/libaudioproxy2.so
-vendor/lib64/lib_SoundBooster_ver1070.so
 vendor/lib64/soundfx/libaudiosaplus_sec.so
 vendor/lib64/soundfx/libsamsungSoundbooster_plus.so
 vendor/lib64/soundfx/libswdap.so
 vendor/lib64/soundfx/libswspatializer.so
+vendor/lib64/lib_SoundBooster_ver1070.so
+vendor/lib64/libaudioproxy2.so
 vendor/lib64/spatializer-aidl-V1-cpp.so
 
 # Audio firmware
-vendor/firmware/AP_AUDIO_SLSI.bin
-vendor/firmware/a2dpcom.bin
 vendor/firmware/APBargeIn_AUDIO_SLSI.bin
 vendor/firmware/APDV_AUDIO_SLSI.bin
+vendor/firmware/AP_AUDIO_SLSI.bin
+vendor/firmware/SoundBoosterParam.bin
+vendor/firmware/a2dpcom.bin
 vendor/firmware/calliope_dram.bin
 vendor/firmware/calliope_dram_2.bin
 vendor/firmware/calliope_sram.bin
 vendor/firmware/calliope_sram_2.bin
+vendor/firmware/cs35l40-bot-dsp1-spk-prot-calib.bin
 vendor/firmware/cs35l40-bot-dsp1-spk-prot.bin
 vendor/firmware/cs35l40-bot-dsp1-spk-prot.wmfw
-vendor/firmware/cs35l40-bot-dsp1-spk-prot-calib.bin
+vendor/firmware/cs35l40-rcv-dsp1-spk-prot-calib.bin
 vendor/firmware/cs35l40-rcv-dsp1-spk-prot.bin
 vendor/firmware/cs35l40-rcv-dsp1-spk-prot.wmfw
-vendor/firmware/cs35l40-rcv-dsp1-spk-prot-calib.bin
 vendor/firmware/dax_param.bin
 vendor/firmware/dsp_master.bin
-vendor/firmware/vts.bin
-vendor/firmware/SoundBoosterParam.bin
+vendor/firmware/rxse.bin
 vendor/firmware/sb_ll.bin
 vendor/firmware/sb_music.bin
 vendor/firmware/sb_others.bin
-vendor/firmware/rxse.bin
 vendor/firmware/txse1.bin
 vendor/firmware/txse2.bin
+vendor/firmware/vts.bin
 
 # Bluetooth firmware
 vendor/firmware/bcm4375B1_murata.hcd
@@ -66,12 +66,12 @@ vendor/lib64/libexynoscamera_vpl_plugin.so
 vendor/lib64/libsec2lsi_conversion.so
 
 # Camera dependencies
-vendor/lib64/libvdis_core.so
-vendor/lib64/libvdis_interface.so
 vendor/lib64/libtriplecam_image_optical_zoom.so
 vendor/lib64/libtriplecam_video_optical_zoom.so
 vendor/lib64/libtriplecapture_interface.so
 vendor/lib64/libtriplepreview_interface.so
+vendor/lib64/libvdis_core.so
+vendor/lib64/libvdis_interface.so
 
 # Camera Firmware
 vendor/firmware/dual_cal_wide_swide.bin
@@ -97,9 +97,6 @@ vendor/firmware/mfc_fw.bin
 
 # Vision firmware
 vendor/firmware/NPU.bin
-vendor/firmware/libnn.elf
-vendor/firmware/libivp.elf
-vendor/firmware/liblog.elf
 vendor/firmware/dsp.bin
 vendor/firmware/dsp_do.bin
 vendor/firmware/dsp_gkt.xml
@@ -111,12 +108,19 @@ vendor/firmware/dsp_ivp_dm.bin
 vendor/firmware/dsp_ivp_dm_do.bin
 vendor/firmware/dsp_ivp_pm.bin
 vendor/firmware/dsp_ivp_pm_do.bin
+vendor/firmware/libivp.elf
+vendor/firmware/liblog.elf
+vendor/firmware/libnn.elf
 
 # DRM Firmware
 vendor/firmware/OD_V2.1.6_01_26_QVGA.nnc
 vendor/firmware/OD_V2.3.7_02_05_VGA.nnc
 
 # Teegris Firmware
+vendor/tee/driver/00000000-0000-0000-0000-494363447256
+vendor/tee/driver/00000000-0000-0000-0000-4d53546d7374
+vendor/tee/driver/00000000-0000-0000-0000-53626f786476
+vendor/tee/driver/00000000-0000-0000-0000-564c544b4456
 vendor/tee/00000000-0000-0000-0000-000000010081
 vendor/tee/00000000-0000-0000-0000-000000020081
 vendor/tee/00000000-0000-0000-0000-000000534b4d
@@ -125,6 +129,7 @@ vendor/tee/00000000-0000-0000-0000-0000534b504d
 vendor/tee/00000000-0000-0000-0000-0050524f4341
 vendor/tee/00000000-0000-0000-0000-0053545354ab
 vendor/tee/00000000-0000-0000-0000-00575644524d
+vendor/tee/00000000-0000-0000-0000-46494e474502
 vendor/tee/00000000-0000-0000-0000-4662436b6d52
 vendor/tee/00000000-0000-0000-0000-474154454b45
 vendor/tee/00000000-0000-0000-0000-487641557457
@@ -146,11 +151,6 @@ vendor/tee/00000000-0000-0000-0000-656e676d6f64
 vendor/tee/00000000-0000-0000-0000-657365636f6d
 vendor/tee/00000000-0000-0000-0000-6b6e78677564
 vendor/tee/00000000-0000-0000-0000-6d73745f5441
-vendor/tee/00000000-0000-0000-0000-46494e474502
-vendor/tee/driver/00000000-0000-0000-0000-494363447256
-vendor/tee/driver/00000000-0000-0000-0000-4d53546d7374
-vendor/tee/driver/00000000-0000-0000-0000-53626f786476
-vendor/tee/driver/00000000-0000-0000-0000-564c544b4456
 vendor/tee/ffffffff-0000-0000-0000-000000000030
 
 # Sensors
