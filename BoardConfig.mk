@@ -5,8 +5,6 @@
 
 DEVICE_PATH := device/samsung/r9s
 
-# Kernel
-TARGET_KERNEL_CONFIG := samsung/r9s.config
 
 # Kernel Modules
 BOARD_VENDOR_RAMDISK_KERNEL_MODULES_LOAD := $(strip $(shell cat $(DEVICE_PATH)/modules.load))
