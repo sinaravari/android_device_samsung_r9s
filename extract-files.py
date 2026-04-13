@@ -14,10 +14,10 @@ from extract_utils.main import (
 )
 
 namespace_imports = [
-    'device/samsung/exynos2100',
+    'device/samsung/universal2100-common',
     'hardware/samsung_slsi-linaro/exynos',
     'hardware/samsung_slsi-linaro/graphics',
-    'vendor/samsung/exynos2100',
+    'vendor/samsung/universal2100-common',
 ]
 
 blob_fixups: blob_fixups_user_type = {
@@ -62,6 +62,6 @@ module = ExtractUtilsModule(
 
 if __name__ == '__main__':
     utils = ExtractUtils.device_with_common(
-        module, 'exynos2100', module.vendor
+        module, 'universal2100-common', module.vendor
     )
     utils.run()
