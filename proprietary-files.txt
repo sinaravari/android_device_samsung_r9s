@@ -15,7 +15,6 @@ vendor/lib64/soundfx/libsamsungSoundbooster_plus.so
 vendor/lib64/soundfx/libswdap.so
 vendor/lib64/soundfx/libswspatializer.so
 vendor/lib64/lib_SoundBooster_ver1070.so
-vendor/lib64/libaudioproxy2.so
 vendor/lib64/spatializer-aidl-V1-cpp.so
 
 # Audio firmware
