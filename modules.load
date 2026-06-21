@@ -74,7 +74,6 @@ imgloader.ko
 sysevent_notif.ko
 sysevent.ko
 exynos2100-itmon.ko
-mcps.ko
 memlogger.ko
 modem_utils.ko
 exynos_dit.ko
