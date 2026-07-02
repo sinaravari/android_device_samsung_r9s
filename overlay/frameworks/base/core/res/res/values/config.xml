@@ -164,9 +164,9 @@
 
          @see https://www.w3.org/TR/SVG/paths.html#PathData
          -->
-    <string translatable="false" name="config_mainBuiltInDisplayCutout">M -30,60 a 20,20 0 1 0 60,0 a 20,20 0 1 0 -60,0 Z</string>
+    <string translatable="false" name="config_mainBuiltInDisplayCutout">M 0,0 M 0,29 a 35,35 0 1,0 0,70 a 35,35 0 1,0 0,-70 Z</string>
 
-    <string name="config_mainBuiltInDisplayCutoutRectApproximation">M -60,0 h 120 v 120 h -120 Z</string>
+    <string name="config_mainBuiltInDisplayCutoutRectApproximation">M -60,0 h 120 v 100 h -120 Z</string>
 
     <!-- Whether the display cutout region of the main built-in display should be forced to
          black in software (to avoid aliasing or emulate a cutout that is not physically existent).
